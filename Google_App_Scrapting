@@ -1,1 +1,54 @@
-hello
+
+1.// Simple Variable
+// function myFunction() {
+// var a = 4;
+// var b = 3;
+// var c = a+b ;
+// Logger.log(c)
+ 
+// }
+
+
+
+2.// Globle Variable
+// var1 = 55
+// function myFunction() {
+// var a = 4;
+// var b = 3;
+// var c = a+b+var1 ;
+// Logger.log(c)
+// }
+
+
+
+3.// This Function a particular cells in one msg print
+// function myFunction() {
+// var mymsg = "Hello Vishal Rastogi";
+// SpreadsheetApp.getUi().alert(mymsg)
+
+// }
+
+
+
+4. Print Values Speardsheet
+function myFunction() {
+var a = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet().getRange("A2").getValue();
+Logger.log(a)
+
+}
+
+
+
+
+5. For loops Function 
+All cells Value add+5
+
+function LearnForloop() {
+  var app = SpreadsheetApp;
+  var activesheet = app.getActiveSpreadsheet().getActiveSheet();
+  
+  for(var i=2; i<=11;i++){
+    var myval = activesheet.getRange(i,1).getValue();
+    activesheet.getRange(i,1).setValue(myval+5);
+
+  }
